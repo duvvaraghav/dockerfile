@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo 'image creation..'
                 sh '''
-                   amiName=$(date +"%d"-"%m"-"%y")
+                   amiName=$(date "%s")
                    echo $amiName
                    sudo docker build -t image:$amiName .
                    sudo docker images
