@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+MAINTAINER duvva <duvva.raghavendra@gmail.ccom>
 RUN apt-get update
 RUN apt-get install nano -y
 RUN apt-get install sudo -y
