@@ -1,4 +1,4 @@
-magpipeline {
+pipeline {
     agent any
 
     stages {
