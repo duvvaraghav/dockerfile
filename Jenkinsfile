@@ -1,13 +1,14 @@
-pipeline {
+magpipeline {
     agent any
 
     stages {
         stage('Build') {
             agent { label 'slave' }
             steps {
-                echo 'jenkins_ansible_integrationsetup..'
+                echo 'Docker image creation..'
                 sh '''
-                   sudo docker build -t image:1.0 .
+                   sudo docker build -t image:2.0 .
+                   sudo docker run -itd --name="server" -p 80:80 image:2.0 /bin/bash
                 '''
             }
         }
