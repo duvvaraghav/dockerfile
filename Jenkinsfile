@@ -7,7 +7,6 @@ magpipeline {
             steps {
                 echo 'Docker image creation..'
                 sh '''
-                   sudo docker build -t image:2.0 .
                 '''
             }
         }
