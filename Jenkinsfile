@@ -5,7 +5,7 @@ magpipeline {
         stage('Build') {
             agent { label 'slave' }
             steps {
-                echo 'Docker image creation..'
+                echo 'image creation..'
                 sh '''
                 '''
             }
