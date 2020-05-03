@@ -10,7 +10,7 @@ pipeline {
                    amiName=$(date +"%d"-"%m"-"%y")
                    echo $amiName
                    sudo docker build -t image:$amiName .
-                   sudo docker ps -a
+                   sudo docker images
                 '''
             }
         }
