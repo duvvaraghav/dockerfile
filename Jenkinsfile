@@ -7,6 +7,8 @@ pipeline {
             steps {
                 echo 'image creation..'
                 sh '''
+                   sudo docker build -t image:2.0 .
+                   sudo docker run -itd --name="test" -p 80:80 image:2.0 /bin/bash
                 '''
             }
         }
