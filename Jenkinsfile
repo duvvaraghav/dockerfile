@@ -7,8 +7,9 @@ pipeline {
             steps {
                 echo 'image creation..'
                 sh '''
-                   sudo docker build -t image:3.0 .
-                   sudo docker run -itd --name="test1"  image:3.0 /bin/bash
+                   amiName=$(date +"%d"-"%m"-"%y")
+                   echo $amiName
+                   sudo docker build -t image:$amiName .
                    sudo docker ps -a
                 '''
             }
